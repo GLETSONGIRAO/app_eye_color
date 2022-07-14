@@ -56,7 +56,8 @@ y = np.round(y_predict[0]*100, 2)
 text = [f"{val:.2%}" for val in y_predict[0]]
 
 fig = px.bar(y=categorias, x=y_predict[0], orientation='h', text=text, width=800,
-     height= 600, title="Predição da Cor dos Olhos do Indivíduo")
+     height= 600, title="Predição da Cor dos Olhos do Indivíduo",
+      color_discrete_map={"Azul/Verde/Cinza":"#1569C7","Castanho/Escuro":"#A0522D","Intermediário":"#ffe699"}, color=categorias)
 
 fig.update_traces(textfont_size=20)
 
